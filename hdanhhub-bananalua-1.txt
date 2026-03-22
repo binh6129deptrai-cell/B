@@ -1,69 +1,6 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hdanhhub/hdanhhub/refs/heads/main/fixlagbyhdanh.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnhDangNhoEm/TuanAnhIOS/refs/heads/main/koby"))()
 
--- ==========================================
--- SERVICES
--- ==========================================
-local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Workspace = game:GetService("Workspace")
-local RunService = game:GetService("RunService")
-local TweenService = game:GetService("TweenService")
-local HttpService = game:GetService("HttpService")
-local TeleportService = game:GetService("TeleportService")
-local VirtualInputManager = game:GetService("VirtualInputManager")
-local VirtualUser = game:GetService("VirtualUser")
-local Lighting = game:GetService("Lighting")
-local CollectionService = game:GetService("CollectionService")
-
--- PLAYER
-local Player = Players.LocalPlayer
-local PlayerGui = Player:WaitForChild("PlayerGui", 5)
-
--- CHARACTER
-local Character = Player.Character or Player.CharacterAdded:Wait()
-local Humanoid = Character:WaitForChild("Humanoid")
-local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
-
--- EXPLOIT CHECK
-local executor = (getexecutorname and getexecutorname()) or (identifyexecutor and identifyexecutor())
-if executor then
-    if
-        string.find(executor, "Bunni") or
-        string.find(executor, "FluxusZ") or
-        string.find(executor, "Delta") or
-        string.find(executor, "Arceus") or
-        string.find(executor, "Xeno") or
-        string.find(executor, "Swift") or
-        string.find(executor, "Awp") or
-        string.find(executor, "Volcano") or
-        string.find(executor, "Argon") or
-        string.find(executor, "Macsploit") or
-        string.find(executor, "Potassium") or
-        string.find(executor, "CodeX") or
-        string.find(executor, "Velocity") or
-        string.find(executor, "Romix") or
-        string.find(executor, "Neutron")
-    then
-        print("ok")
-    else
-        game.Players.LocalPlayer:Kick("Please use Delta Exploit or PC use volcano or Exploit paid!")
-    end
-end
-
--- ALIASES
-local ply = Players
-local replicated = ReplicatedStorage
-local RunSer = RunService
-local vim1 = VirtualInputManager
-local vim2 = VirtualUser
-local TW = TweenService
-local plr = Player
-local Root = HumanoidRootPart
-
--- ==========================================
--- LOAD UI LIBRARY (Binh6129 Hub)
--- ==========================================
 Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/hdanhhub/UI/refs/heads/main/ui_BananaHub_final.lua"))()
 
 Window = Library:CreateWindow({
